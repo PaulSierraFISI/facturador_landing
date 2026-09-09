@@ -1,0 +1,64 @@
+/* Inter variable, self-host. Reemplaza las 42 declaraciones @font-face que
+   traia el bundle (6 pesos x 7 subsets) por dos archivos que cubren todo el
+   rango de peso. Origen: @fontsource-variable/inter. */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-latin-ext-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root{
+  --v:#6C63FF; --v-dark:#5A51E8; --v-soft:#F3F2FF; --v-mid:#B9B4FF;
+  --ink:#18181B; --ink-2:#52525B; --ink-3:#71717A; --line:#E4E4E7;
+  --ok:#16A34A; --ok-soft:#E8F7EE;
+  --pad:clamp(20px,5vw,80px);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Inter Variable',Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty;}
+h1,h2,h3,h4,p,ul{margin:0;}
+ul{padding:0;list-style:none;}
+a{color:var(--v);text-decoration:none;}
+a:hover{color:var(--v-dark);}
+summary::-webkit-details-marker{display:none;}
+summary{list-style:none;cursor:pointer;}
+details[open] .chev{transform:rotate(45deg);}
+html{scroll-behavior:smooth;}
+section[id]{scroll-margin-top:88px;}
+[data-menu]{display:none;position:relative;}
+[data-menu] > summary{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--line);border-radius:10px;color:var(--ink);}
+[data-menu][open] > summary [data-burger]{display:none;}
+[data-menu]:not([open]) > summary [data-close]{display:none;}
+@media (max-width:860px){
+  [data-nav]{gap:18px!important;font-size:13.5px!important;}
+  [data-header-row]{gap:14px!important;}
+}
+@media (max-width:760px){
+  [data-nav]{display:none!important;}
+  [data-menu]{display:block!important;}
+  [data-cta]{margin-left:auto;}
+}
+:focus-visible{outline:2px solid var(--v);outline-offset:3px;}
+::selection{background:var(--v-mid);color:var(--ink);}
+
+/* El export emitia estos estados como style-hover, un atributo que ningun
+   navegador interpreta: todos los hover del sitio estaban muertos. */
+[data-hover="h1"]:hover{background:var(--v-dark);color:#fff;}
+[data-hover="h2"]:hover{background:#F3F2FF;color:var(--v-dark);}
+[data-hover="h3"]:hover{background:rgba(255,255,255,.12);color:#fff;}
+[data-hover="h4"]:hover{background:var(--v-soft);color:var(--v-dark);}
+[data-hover="h5"]:hover{color:#fff;}

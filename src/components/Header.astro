@@ -1,0 +1,35 @@
+---
+import { waHref } from '../config';
+---
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
+    <div data-header-row="true" style="max-width:1240px;margin:0 auto;padding:14px var(--pad);display:flex;align-items:center;gap:24px;justify-content:space-between;">
+      <a href="/" style="display:flex;align-items:center;gap:9px;color:var(--ink);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.6 2h9.1L21 9.3v11.1c0 .9-.7 1.6-1.6 1.6H4.6c-.9 0-1.6-.7-1.6-1.6V3.6C3 2.7 3.7 2 4.6 2Z" fill="#6C63FF"></path><path d="M13.7 2 21 9.3h-5.7c-.9 0-1.6-.7-1.6-1.6V2Z" fill="#B9B4FF"></path></svg>
+        <span style="font-size:22px;font-weight:800;letter-spacing:-.03em;">ruckia</span>
+      </a>
+      <nav data-nav="true" style="display:flex;gap:26px;margin-left:auto;font-size:14.5px;font-weight:500;">
+        <a href="/#beneficios" style="color:var(--ink-2);">Beneficios</a>
+        <a href="/#como-funciona" style="color:var(--ink-2);">Cómo funciona</a>
+        <a href="/#precios" style="color:var(--ink-2);">Precios</a>
+        <a href="/#faq" style="color:var(--ink-2);">Preguntas frecuentes</a>
+        <a href="/blog" style="color:var(--ink-2);">Blog</a>
+      </nav>
+      <a href={waHref} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--v);color:#fff;font-size:14.5px;font-weight:600;padding:11px 18px;border-radius:10px;white-space:nowrap;" data-cta="true" data-hover="h1">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6a11 11 0 0 1-4.2-3.9c-.3-.5-.7-1.2-.7-2 0-.8.4-1.3.6-1.5.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.2.2.1.4 0 .5-.1l.6-.7c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.5.3v.6Z"></path></svg>
+        Escríbenos
+      </a>
+      <details data-menu="true">
+        <summary aria-label="Abrir menú">
+          <svg data-burger width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+          <svg data-close width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </summary>
+        <div onclick="this.parentNode.open=false" style="position:absolute;top:calc(100% + 10px);right:0;min-width:212px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.10);padding:8px;display:flex;flex-direction:column;">
+          <a href="/#beneficios" style="color:var(--ink-2);font-size:15px;font-weight:500;padding:11px 12px;border-radius:8px;">Beneficios</a>
+          <a href="/#como-funciona" style="color:var(--ink-2);font-size:15px;font-weight:500;padding:11px 12px;border-radius:8px;">Cómo funciona</a>
+          <a href="/#precios" style="color:var(--ink-2);font-size:15px;font-weight:500;padding:11px 12px;border-radius:8px;">Precios</a>
+          <a href="/#faq" style="color:var(--ink-2);font-size:15px;font-weight:500;padding:11px 12px;border-radius:8px;">Preguntas frecuentes</a>
+          <a href="/blog" style="color:var(--ink-2);font-size:15px;font-weight:500;padding:11px 12px;border-radius:8px;">Blog</a>
+        </div>
+      </details>
+    </div>
+  </header>

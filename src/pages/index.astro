@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { waHref } from '../config';
+---
+<BaseLayout>
+<section id="top" style="position:relative;background:var(--v);color:#fff;padding:clamp(56px,7vw,96px) var(--pad) clamp(110px,13vw,180px);clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 64px));">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(36px,5vw,72px);align-items:center;">
+      <div style="min-width:0;">
+        <div style="display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.16);padding:7px 13px;border-radius:999px;">Facturación electrónica para tu MYPE</div>
+        <h1 style="margin-top:22px;font-size:clamp(34px,5.2vw,60px);line-height:1.05;font-weight:800;letter-spacing:-.035em;">Emite tus facturas y boletas sin dolores de cabeza con SUNAT</h1>
+        <p style="margin-top:20px;font-size:clamp(16px,1.6vw,19.5px);line-height:1.55;color:rgba(255,255,255,.92);max-width:32em;">Ruckia se encarga de la parte técnica y legal, para que tú te enfoques en atender a tus clientes — no en entender SUNAT.</p>
+        <div style="margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;">
+          <a href={waHref} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--v);font-size:16px;font-weight:700;padding:15px 24px;border-radius:12px;" data-hover="h2">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6a11 11 0 0 1-4.2-3.9c-.3-.5-.7-1.2-.7-2 0-.8.4-1.3.6-1.5.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.2.2.1.4 0 .5-.1l.6-.7c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.5.3v.6Z"></path></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a href="#como-funciona" style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.55);color:#fff;font-size:16px;font-weight:600;padding:15px 24px;border-radius:12px;" data-hover="h3">Ver cómo funciona</a>
+        </div>
+        
+          <p style="margin-top:26px;font-size:13.5px;color:rgba(255,255,255,.78);display:flex;align-items:center;gap:9px;">
+            <span style="width:7px;height:7px;border-radius:50%;background:#7CF0A8;display:inline-block;flex:none;"></span>
+            Ya en uso por negocios que facturan todos los días con Ruckia
+          </p>
+        
+      </div>
+
+      <div style="min-width:0;display:flex;justify-content:center;">
+        <div style="width:100%;max-width:400px;background:#fff;border-radius:18px;padding:20px;box-shadow:0 24px 60px rgba(24,24,27,.22);">
+          <div style="display:flex;align-items:center;gap:8px;padding-bottom:14px;border-bottom:1px solid var(--line);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.6 2h9.1L21 9.3v11.1c0 .9-.7 1.6-1.6 1.6H4.6c-.9 0-1.6-.7-1.6-1.6V3.6C3 2.7 3.7 2 4.6 2Z" fill="#6C63FF"></path><path d="M13.7 2 21 9.3h-5.7c-.9 0-1.6-.7-1.6-1.6V2Z" fill="#B9B4FF"></path></svg>
+            <span style="font-size:14px;font-weight:800;color:var(--ink);letter-spacing:-.02em;">ruckia</span>
+            <span style="font-size:12.5px;color:var(--ink-3);">· Facturación electrónica</span>
+          </div>
+          <div style="margin-top: 18px; background: var(--ok-soft); border-radius: 14px; padding: 20px; display: flex; gap: 14px; align-items: center">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--ok);display:flex;align-items:center;justify-content:center;flex:none;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"></path></svg>
+            </div>
+            <div style="min-width:0;">
+              
+              
+            <p style="font-size:17px;font-weight:700;color:#14532D;letter-spacing:-.01em;">Factura enviada con éxito</p></div>
+          </div>
+          <div style="margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border:1px solid var(--line);border-radius:12px;">
+            <span style="font-size:13.5px;color:var(--ink-2);font-weight:500;">Enviada a SUNAT</span>
+            <span style="font-size:12px;font-weight:700;color:var(--ok);background:var(--ok-soft);padding:5px 10px;border-radius:999px;">Aceptada</span>
+          </div>
+          <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="padding:12px 14px;border-radius:12px;background:var(--v-soft);">
+              <p style="font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--v);">Comprobante</p>
+              <p style="margin-top:4px;font-size:14px;font-weight:600;color:var(--ink);">F001-00214</p>
+            </div>
+            <div style="padding:12px 14px;border-radius:12px;background:var(--v-soft);">
+              <p style="font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--v);">Total</p>
+              <p style="margin-top:4px;font-size:14px;font-weight:600;color:var(--ink);">S/ 148.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(64px,8vw,104px) var(--pad);">
+    <div style="max-width:1240px;margin:0 auto;">
+      <p style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--v);">El dolor de cabeza de siempre</p>
+      <h2 style="margin-top:14px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.1;max-width:16em;">Facturar no debería sentirse así</h2>
+      <p style="margin-top:14px;font-size:17px;line-height:1.55;color:var(--ink-2);max-width:40em;">Lo que hoy le complica la vida a un negocio pequeño cuando tiene que emitir comprobantes.</p>
+      <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;">
+        <div style="border:1px solid var(--line);border-radius:14px;padding:26px 24px;">
+          <div style="width:40px;height:4px;border-radius:2px;background:var(--v);"></div>
+          <h3 style="margin-top:18px;font-size:19px;font-weight:700;letter-spacing:-.02em;">Miedo a la multa</h3>
+          <p style="margin-top:9px;font-size:15px;line-height:1.55;color:var(--ink-2);">No saber si estás emitiendo el comprobante correcto puede salirte caro.</p>
+        </div>
+        <div style="border:1px solid var(--line);border-radius:14px;padding:26px 24px;">
+          <div style="width:40px;height:4px;border-radius:2px;background:var(--v);"></div>
+          <h3 style="margin-top:18px;font-size:19px;font-weight:700;letter-spacing:-.02em;">Trámites técnicos</h3>
+          <p style="margin-top:9px;font-size:15px;line-height:1.55;color:var(--ink-2);">XML, CDR, firma digital... términos que no deberías tener que entender.</p>
+        </div>
+        <div style="border:1px solid var(--line);border-radius:14px;padding:26px 24px;">
+          <div style="width:40px;height:4px;border-radius:2px;background:var(--v);"></div>
+          <h3 style="margin-top:18px;font-size:19px;font-weight:700;letter-spacing:-.02em;">Herramientas complicadas</h3>
+          <p style="margin-top:9px;font-size:15px;line-height:1.55;color:var(--ink-2);">Plataformas pensadas para contadores, no para dueños de negocio.</p>
+        </div>
+        <div style="border:1px solid var(--line);border-radius:14px;padding:26px 24px;">
+          <div style="width:40px;height:4px;border-radius:2px;background:var(--v);"></div>
+          <h3 style="margin-top:18px;font-size:19px;font-weight:700;letter-spacing:-.02em;">Tiempo que no tienes</h3>
+          <p style="margin-top:9px;font-size:15px;line-height:1.55;color:var(--ink-2);">Cada minuto en papeleo es un minuto que no le dedicas a tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" style="background:var(--v-soft);padding:clamp(80px,9vw,120px) var(--pad) clamp(64px,8vw,104px);clip-path:polygon(0 64px,100% 0,100% 100%,0 100%);">
+    <div style="max-width:1240px;margin:0 auto;">
+      <p style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--v);">Así de simple</p>
+      <h2 style="margin-top:14px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.1;max-width:16em;">Factura en 3 pasos, no en 3 horas</h2>
+      <p style="margin-top:14px;font-size:17px;line-height:1.55;color:var(--ink-2);max-width:42em;">Sin capacitaciones, sin manuales, sin depender de un contador para emitir un comprobante.</p>
+      <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+        <div style="background:#fff;border-radius:16px;padding:30px 26px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:var(--v);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;">1</div>
+          <h3 style="margin-top:20px;font-size:21px;font-weight:700;letter-spacing:-.02em;">Regístrate</h3>
+          <p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--ink-2);">Cuéntanos de tu negocio y tu régimen tributario: Nuevo RUS, RER, RMT o Régimen General.</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:30px 26px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:var(--v);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;">2</div>
+          <h3 style="margin-top:20px;font-size:21px;font-weight:700;letter-spacing:-.02em;">Configura en minutos</h3>
+          <p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--ink-2);">Ruckia arma todo lo técnico por ti: comprobantes listos y válidos ante SUNAT.</p>
+        </div>
+        <div style="background:#fff;border-radius:16px;padding:30px 26px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:var(--v);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;">3</div>
+          <h3 style="margin-top:20px;font-size:21px;font-weight:700;letter-spacing:-.02em;">Empieza a facturar</h3>
+          <p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--ink-2);">Emite facturas y boletas desde tu celular o computadora, cuando lo necesites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" style="padding:clamp(64px,8vw,104px) var(--pad);">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,64px);">
+      <div style="min-width:0;">
+        <p style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--v);">Por qué Ruckia</p>
+        <h2 style="margin-top:14px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.1;">Hecho para negocios como el tuyo, no para contadores</h2>
+      </div>
+      <div style="min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 32px;">
+        <div>
+          <h3 style="font-size:18px;font-weight:700;letter-spacing:-.02em;">Cumples con SUNAT sin estudiarlo</h3>
+          <p style="margin-top:8px;font-size:15px;line-height:1.55;color:var(--ink-2);">Cada comprobante que emites queda validado. Tú solo facturas.</p>
+        </div>
+        <div>
+          <h3 style="font-size:18px;font-weight:700;letter-spacing:-.02em;">Para tu régimen tributario</h3>
+          <p style="margin-top:8px;font-size:15px;line-height:1.55;color:var(--ink-2);">Nuevo RUS, RER, RMT o Régimen General: Ruckia se ajusta a tu negocio.</p>
+        </div>
+        <div>
+          <h3 style="font-size:18px;font-weight:700;letter-spacing:-.02em;">Simple de verdad</h3>
+          <p style="margin-top:8px;font-size:15px;line-height:1.55;color:var(--ink-2);">Sin manuales de 50 páginas ni curvas de aprendizaje.</p>
+        </div>
+        <div>
+          <h3 style="font-size:18px;font-weight:700;letter-spacing:-.02em;">Acompañamiento cercano</h3>
+          <p style="margin-top:8px;font-size:15px;line-height:1.55;color:var(--ink-2);">Resolvemos tus dudas al toque, no con tickets de soporte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--ink);color:#fff;padding:clamp(64px,8vw,104px) var(--pad);">
+    <div style="max-width:1240px;margin:0 auto;">
+      <p style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--v-mid);">Para negocios como el tuyo</p>
+      <h2 style="margin-top:14px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.1;">Así se usa Ruckia en el día a día</h2>
+      <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
+        <div style="border:1px solid #3F3F46;border-radius:16px;padding:28px 24px;">
+          <h3 style="font-size:20px;font-weight:700;letter-spacing:-.02em;">Bodegas y minimarkets</h3>
+          <p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:#D4D4D8;">Emiten la boleta al instante en el mostrador, sin hacer esperar al cliente.</p>
+        </div>
+        <div style="border:1px solid #3F3F46;border-radius:16px;padding:28px 24px;">
+          <h3 style="font-size:20px;font-weight:700;letter-spacing:-.02em;">Talleres y servicios</h3>
+          <p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:#D4D4D8;">Facturan apenas terminan el trabajo, directo desde el celular.</p>
+        </div>
+        <div style="border:1px solid #3F3F46;border-radius:16px;padding:28px 24px;">
+          <h3 style="font-size:20px;font-weight:700;letter-spacing:-.02em;">Tiendas por WhatsApp</h3>
+          <p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:#D4D4D8;">Generan el comprobante justo después de coordinar la entrega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios" style="padding:clamp(64px,8vw,104px) var(--pad);">
+    <div style="max-width:1240px;margin:0 auto;">
+      <p style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--v);">Precios simples</p>
+      <h2 style="margin-top:14px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.1;">Un plan para cada etapa de tu negocio</h2>
+      
+        <p style="margin-top:16px;display:inline-block;font-size:13.5px;font-weight:600;color:var(--v);background:var(--v-soft);padding:9px 14px;border-radius:10px;">Los precios varían según el rubro y la escala de tu negocio. Escríbenos y te cotizamos.</p>
+      
+      <div style="margin-top: 40px; max-width: 820px; display: grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 20px; align-items: start; margin-right: auto; margin-left: auto">
+        <div style="border:1px solid var(--line);border-radius:18px;padding:30px 26px;">
+          <h3 style="font-size:22px;font-weight:800;letter-spacing:-.025em;">Emprendedor</h3>
+          <p style="margin-top:6px;font-size:14.5px;color:var(--ink-3);">Ideal para Nuevo RUS</p>
+          <p style="margin-top:22px;font-size:34px;font-weight:800;letter-spacing:-.03em;">Desde S/ 40 <span style="font-size:16px;font-weight:500;color:var(--ink-3);">/ mes</span></p>
+          <p style="margin-top:6px;font-size:14.5px;color:var(--ink-3);">o S/ 400 al año</p>
+          <ul style="margin-top:24px;display:grid;gap:12px;">
+            <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:var(--ink-2);"><span style="color:var(--v);font-weight:800;flex:none;">✓</span>Facturas y boletas electrónicas</li>
+            <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:var(--ink-2);"><span style="color:var(--v);font-weight:800;flex:none;">✓</span>Hasta 200 comprobantes al mes</li>
+            <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:var(--ink-2);"><span style="color:var(--v);font-weight:800;flex:none;">✓</span>Soporte por WhatsApp</li>
+          </ul>
+          <a href={waHref} target="_blank" rel="noopener" style="margin-top:26px;display:block;text-align:center;border:1.5px solid var(--v);color:var(--v);font-size:15.5px;font-weight:700;padding:13px 20px;border-radius:12px;" data-hover="h4">Elegir plan</a>
+        </div>
+        <div style="border:2px solid var(--v);background:var(--v);color:#fff;border-radius:18px;padding:30px 26px;position:relative;">
+          <span style="position:absolute;top:-13px;left:26px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;">Más elegido</span>
+          <h3 style="font-size:22px;font-weight:800;letter-spacing:-.025em;">Negocio</h3>
+          <p style="margin-top:6px;font-size:14.5px;color:rgba(255,255,255,.8);">Ideal para RER, RMT y Régimen General</p>
+          <p style="margin-top:22px;font-size:34px;font-weight:800;letter-spacing:-.03em;">Según tu escala</p>
+          <p style="margin-top:6px;font-size:14.5px;color:rgba(255,255,255,.8);">Te cotizamos por WhatsApp</p>
+          <ul style="margin-top:24px;display:grid;gap:12px;">
+            <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:rgba(255,255,255,.94);"><span style="font-weight:800;flex:none;">✓</span>Facturas, boletas y notas de crédito/débito</li>
+            <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:rgba(255,255,255,.94);"><span style="font-weight:800;flex:none;">✓</span>Volumen de comprobantes según tu escala</li>
+            <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:rgba(255,255,255,.94);"><span style="font-weight:800;flex:none;">✓</span>Soporte prioritario</li>
+          </ul>
+          <a href={waHref} target="_blank" rel="noopener" style="margin-top:26px;display:block;text-align:center;background:#fff;color:var(--v);font-size:15.5px;font-weight:700;padding:13px 20px;border-radius:12px;" data-hover="h2">Elegir plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="background:var(--v-soft);padding:clamp(64px,8vw,104px) var(--pad);">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(32px,5vw,64px);align-items:start;">
+      <div style="min-width:0;">
+        <p style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--v);">Preguntas frecuentes</p>
+        <h2 style="margin-top:14px;font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.1;">Lo que todos nos preguntan</h2>
+        <p style="margin-top:14px;font-size:16px;line-height:1.55;color:var(--ink-2);">¿Te quedó una duda que no está aquí? Escríbenos y te respondemos al toque.</p>
+      </div>
+      <div style="min-width:0;display:grid;gap:12px;">
+        <details style="background:#fff;border-radius:14px;padding:20px 22px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:600;letter-spacing:-.015em;">¿Ruckia reemplaza mi RUC?<span class="chev" style="flex:none;width:11px;height:11px;border-right:2px solid var(--v);border-bottom:2px solid var(--v);transform:rotate(45deg);transition:transform .2s;"></span></summary>
+          <p style="margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink-2);">No. Tu RUC sigue siendo tuyo y lo mantienes en SUNAT. Ruckia es la herramienta con la que emites tus comprobantes usando ese RUC.</p>
+        </details>
+        <details style="background:#fff;border-radius:14px;padding:20px 22px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:600;letter-spacing:-.015em;">¿Sirve si estoy en el Nuevo RUS?<span class="chev" style="flex:none;width:11px;height:11px;border-right:2px solid var(--v);border-bottom:2px solid var(--v);transform:rotate(45deg);transition:transform .2s;"></span></summary>
+          <p style="margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink-2);">Sí. Ruckia se configura según tu régimen y te deja emitir los comprobantes que te corresponden. Si más adelante cambias de régimen, lo ajustamos contigo.</p>
+        </details>
+        <details style="background:#fff;border-radius:14px;padding:20px 22px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:600;letter-spacing:-.015em;">¿Qué pasa si SUNAT audita mis comprobantes?<span class="chev" style="flex:none;width:11px;height:11px;border-right:2px solid var(--v);border-bottom:2px solid var(--v);transform:rotate(45deg);transition:transform .2s;"></span></summary>
+          <p style="margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink-2);">Cada comprobante que emites queda registrado con su respaldo electrónico y disponible para descargar cuando lo necesites.</p>
+        </details>
+        <details style="background:#fff;border-radius:14px;padding:20px 22px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:600;letter-spacing:-.015em;">¿Necesito saber de tecnología?<span class="chev" style="flex:none;width:11px;height:11px;border-right:2px solid var(--v);border-bottom:2px solid var(--v);transform:rotate(45deg);transition:transform .2s;"></span></summary>
+          <p style="margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink-2);">No. La parte técnica —XML, CDR, firma digital— la resuelve Ruckia. Tú solo llenas los datos de la venta y envías.</p>
+        </details>
+        <details style="background:#fff;border-radius:14px;padding:20px 22px;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:600;letter-spacing:-.015em;">¿Puedo emitir desde mi celular?<span class="chev" style="flex:none;width:11px;height:11px;border-right:2px solid var(--v);border-bottom:2px solid var(--v);transform:rotate(45deg);transition:transform .2s;"></span></summary>
+          <p style="margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink-2);">Sí. Ruckia funciona desde el celular o la computadora, con la misma cuenta y los mismos datos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--v);color:#fff;padding:clamp(96px,11vw,140px) var(--pad);clip-path:polygon(0 0,100% 64px,100% 100%,0 100%);">
+    <div style="max-width:1240px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px;">
+      <h2 style="font-size:clamp(30px,4.4vw,52px);font-weight:800;letter-spacing:-.035em;line-height:1.08;max-width:16em;">Deja de complicarte con SUNAT</h2>
+      <p style="font-size:clamp(16px,1.6vw,19px);line-height:1.55;color:rgba(255,255,255,.92);max-width:34em;">Cuéntanos de tu negocio por WhatsApp y te ayudamos a emitir tu primer comprobante.</p>
+      <a href={waHref} target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:11px;background:#fff;color:var(--v);font-size:18px;font-weight:700;padding:18px 30px;border-radius:14px;" data-hover="h2">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6a11 11 0 0 1-4.2-3.9c-.3-.5-.7-1.2-.7-2 0-.8.4-1.3.6-1.5.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.4l.7 1.7c.1.2 0 .4-.1.5l-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.2.2.1.4 0 .5-.1l.6-.7c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.5.3v.6Z"></path></svg>
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
+</BaseLayout>
