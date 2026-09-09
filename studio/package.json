@@ -1,0 +1,19 @@
+{
+  "name": "studio-facturador-ruckia",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sanity Studio del blog de Ruckia",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "login": "sanity login"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^6.13.1",
+    "styled-components": "^6.1.13"
+  }
+}

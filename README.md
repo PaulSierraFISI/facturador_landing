@@ -35,3 +35,36 @@ diseño. Ese formato traía tres fallas heredadas, corregidas durante la migraci
    navegador interpreta: estaban todos muertos.
 
 El canvas ya no es la fuente de verdad; este repositorio sí.
+
+## Blog (Sanity)
+
+El contenido vive en Sanity (proyecto `facturador_ruckia`, id `2veu0c14`,
+dataset `production`) y el sitio se genera estático en cada publicación.
+
+- `studio/` — el Sanity Studio. Es un proyecto aparte: **no forma parte del
+  build de Astro** ni se monta en ninguna ruta del sitio. Vive aquí para que el
+  esquema quede versionado junto al sitio que lo consume.
+- `src/lib/sanity.ts` — cliente y consultas GROQ.
+- `src/lib/portableText.ts` — convierte el contenido a HTML **en build**, para
+  que el artículo le llegue ya renderizado al crawler.
+
+### Publicar el Studio
+
+```powershell
+cd studio
+npm install
+npm run login    # abre el navegador
+npm run deploy   # publica en https://facturador-ruckia.sanity.studio
+```
+
+### Republicación automática
+
+Falta conectar el webhook para que publicar un artículo redespliegue el sitio:
+
+1. En Vercel: *Settings → Git → Deploy Hooks*, crear uno sobre la rama de
+   producción y copiar la URL.
+2. En Sanity: *API → Webhooks → Create webhook*, pegar esa URL, método `POST`,
+   dataset `production`, filtro `_type == "post"`, disparadores create/update/delete.
+
+Sin ese webhook el blog funciona igual, pero los artículos nuevos solo aparecen
+en el siguiente despliegue.

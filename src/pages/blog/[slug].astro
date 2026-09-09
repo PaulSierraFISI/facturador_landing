@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { listarPosts, obtenerPost, urlDeImagen, formatearFecha } from '../../lib/sanity';
+import { renderizarCuerpo } from '../../lib/portableText';
+import { SITE_NAME, SITE_URL } from '../../config';
+
+export async function getStaticPaths() {
+  const posts = await listarPosts();
+  return posts.map((post) => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await obtenerPost(slug!);
+if (!post) return Astro.redirect('/blog');
+
+const cuerpo = renderizarCuerpo(post.body);
+const imagenOg = urlDeImagen(post.coverImage).width(1200).height(630).fit('crop').auto('format').url();
+const base = Astro.site ?? new URL(SITE_URL);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.title,
+  description: post.excerpt,
+  image: new URL(imagenOg, base).href,
+  datePublished: post.publishedAt,
+  dateModified: post._updatedAt,
+  author: { '@type': 'Organization', name: post.author ?? SITE_NAME },
+  publisher: { '@type': 'Organization', name: SITE_NAME },
+  mainEntityOfPage: new URL(Astro.url.pathname, base).href,
+};
+---
+<BaseLayout
+  title={post.seoTitle ?? `${post.title} — ${SITE_NAME}`}
+  description={post.seoDescription ?? post.excerpt}
+  image={imagenOg}
+  type="article"
+  publishedTime={post.publishedAt}
+  modifiedTime={post._updatedAt}
+>
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(jsonLd)} />
+
+  <article style="padding:clamp(40px,5vw,72px) var(--pad) clamp(56px,7vw,96px);">
+    <div class="articulo">
+      <a href="/blog" style="font-size:14px;font-weight:600;color:var(--v);">← Volver al blog</a>
+
+      <h1 style="margin-top:22px;font-size:clamp(29px,4vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1.12;color:var(--ink);">
+        {post.title}
+      </h1>
+
+      <p style="margin-top:16px;font-size:14.5px;color:var(--ink-3);font-weight:500;">
+        {formatearFecha(post.publishedAt)}
+        {post.author && <span> · {post.author}</span>}
+      </p>
+
+      <img
+        class="articulo-portada"
+        style="margin-top:34px;"
+        src={urlDeImagen(post.coverImage).width(1440).fit('max').auto('format').url()}
+        alt={post.coverImage.alt ?? ''}
+      />
+
+      <div class="prose" set:html={cuerpo} />
+
+      {post.tags && post.tags.length > 0 && (
+        <div style="margin-top:44px;display:flex;flex-wrap:wrap;gap:8px;">
+          {post.tags.map((tag) => (
+            <span style="font-size:13px;font-weight:600;color:var(--v);background:var(--v-soft);padding:7px 12px;border-radius:8px;">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  </article>
+</BaseLayout>

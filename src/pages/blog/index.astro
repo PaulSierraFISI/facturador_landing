@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { listarPosts, urlDeImagen, formatearFecha } from '../../lib/sanity';
+import { SITE_NAME } from '../../config';
+
+const posts = await listarPosts();
+---
+<BaseLayout
+  title={`Blog — ${SITE_NAME}`}
+  description="Guías claras sobre facturación electrónica, SUNAT y gestión para micro y pequeñas empresas en Perú."
+>
+  <section class="blog-cabecera">
+    <div class="blog-contenido">
+      <h1>Blog</h1>
+      <p>
+        Guías claras sobre facturación electrónica, SUNAT y la gestión del día a día
+        de un negocio pequeño en Perú.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(48px,6vw,80px) var(--pad);">
+    <div class="blog-contenido">
+      {posts.length === 0 ? (
+        <div class="blog-vacio">
+          <p>Todavía no hay artículos publicados. Vuelve pronto.</p>
+        </div>
+      ) : (
+        <div class="blog-grid">
+          {posts.map((post) => (
+            <a href={`/blog/${post.slug}`} class="blog-card">
+              <img
+                src={urlDeImagen(post.coverImage).width(720).height(405).fit('crop').auto('format').url()}
+                alt={post.coverImage.alt ?? ''}
+                width="720"
+                height="405"
+                loading="lazy"
+              />
+              <div class="blog-card-cuerpo">
+                <span class="blog-meta">{formatearFecha(post.publishedAt)}</span>
+                <h2>{post.title}</h2>
+                <p>{post.excerpt}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

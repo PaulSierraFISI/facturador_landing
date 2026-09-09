@@ -72,7 +72,7 @@ const jsonLd = {
       href="/fonts/inter-latin-wght-normal.woff2"
       crossorigin
     />
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
     <slot name="head" />
   </head>
   <body>
